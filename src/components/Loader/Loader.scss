@@ -1,0 +1,14 @@
+$darkColor: #292929;
+$loaderContainerWidth: 100%;
+$loaderContainerHeight: 100vh;
+
+.ipos-loader-container {
+    position: fixed;
+    z-index: 1;
+    width: $loaderContainerWidth;
+    height: $loaderContainerHeight;
+    background: $darkColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

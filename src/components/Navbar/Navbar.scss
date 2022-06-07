@@ -1,0 +1,99 @@
+$whiteColor: #FFFFFF;
+$greyColor: #3C4858;
+$orangeColor: #D35B2B;
+$redColor: #ED1C24;
+$navbarTransitionItems: all 0.2s linear;
+$navbarWidth: 100%;
+$navbarHeight: 9vh;
+$navbarBoxShadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+$navbarBrandItemMarginLeft: 2.5rem;
+$navbarItemGroupFontSize: 0.75rem;
+$navbarTextUppercase: uppercase;
+$navbarItemsFontWeight: 500;
+$navbarItemsPaddingRight: 0.5rem;
+$navbarItemIconsFontSize: 20px;
+$navbarItemIconMargin: 1rem 0.4rem 1rem 1rem;
+$navbarItemSocialIconMargin: 0 0.8rem;
+$navbarSigninBtnBackground: transparent;
+$navbarSigninBtnOutline: none;
+$navbarSigninBtnBorderWidth: 2px;
+$navbarSigninBtnBorderRadius: 22px;
+$navbarSigninBtnPadding: 8px 25px;
+$navbarSigninBtnFontWeight: bold;
+$navbarSigninBtnMargin: 2rem 2.5rem 2rem 1rem;
+$navbarSigninBtnActiveStateBorderRadius: 22px;
+
+.ipos-navbar {
+    width: $navbarWidth;
+    height: $navbarHeight;
+    background: $whiteColor;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: navbar;
+    box-shadow: $navbarBoxShadow;
+    .ipos-navbar-brand-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: $navbarBrandItemMarginLeft;
+    }
+    .ipos-navbar-item-group {
+        display: flex;
+        margin-left: auto;
+        font-size: $navbarItemGroupFontSize;
+        .ipos-navbar-item { 
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            text-transform: $navbarTextUppercase;
+            color: $greyColor;
+            font-weight: $navbarItemsFontWeight;
+            transition: $navbarTransitionItems;
+            padding-right: $navbarItemsPaddingRight; 
+            &:hover {
+                color: $orangeColor;
+            }  
+            .ipos-navbar-item-icon, .ipos-navbar-social-icon {
+                color: $greyColor;
+                font-size: $navbarItemIconsFontSize;
+            }
+            .ipos-navbar-item-icon {
+                margin: $navbarItemIconMargin;
+            }
+            .ipos-navbar-social-icon {
+                margin: $navbarItemSocialIconMargin;
+                transition: $navbarTransitionItems; 
+                &:hover {
+                    color: $orangeColor;
+                }
+            }
+            .ipos-navbar-signin-btn {
+                position: relative;
+                background: $navbarSigninBtnBackground;
+                cursor: pointer;
+                outline: $navbarSigninBtnOutline;
+                color: $redColor;
+                border-color: $redColor;
+                border-style: solid;
+                border-width: $navbarSigninBtnBorderWidth;
+                border-radius: $navbarSigninBtnBorderRadius;
+                padding: $navbarSigninBtnPadding;
+                transition: $navbarTransitionItems;
+                text-transform: $navbarTextUppercase;
+                font-weight: $navbarSigninBtnFontWeight;
+                margin: $navbarSigninBtnMargin;
+                font-size: 0.75rem;
+                &:hover {
+                    color: $whiteColor;
+                    background: $redColor;
+                    border-color: $whiteColor;
+                    transition: $navbarTransitionItems;   
+                }
+                &:active {
+                    border-radius: $navbarSigninBtnActiveStateBorderRadius;
+                }
+            }
+        }
+    }
+}

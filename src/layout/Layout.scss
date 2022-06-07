@@ -1,0 +1,15 @@
+$layoutAppContentGridTemplateColumns: 1fr;
+$layoutAppContentGridTemplateAreas: 
+    "navbar"
+    "appMainContent"
+    "footer"
+;
+
+.ipos-app-content {
+    display: grid;
+    grid-template-columns: $layoutAppContentGridTemplateColumns;
+    grid-template-areas: $layoutAppContentGridTemplateAreas;
+    .ipos-app-main {
+        grid-area: appMainContent;
+    }
+}

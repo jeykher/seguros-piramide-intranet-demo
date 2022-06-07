@@ -1,0 +1,15 @@
+.ipos-slideshow {
+    width: 100%;
+    height: 91vh;
+    z-index: 1;
+    .ipos-slideshow-image-container {
+        width: 100%;
+        height: 100%;
+        .ipos-slideshow-image {
+            margin: auto;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
